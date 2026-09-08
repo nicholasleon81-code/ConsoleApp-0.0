@@ -25,3 +25,21 @@ Console.WriteLine();
 Console.WriteLine("ID: " + id1 + " | Namn: " + enhet1 + " | Status: " + status1 + " | Pris(brutto): " + price1);
 Console.WriteLine(row2);
 Console.WriteLine(row3);
+
+Console.WriteLine("Ange ID: ");
+string id4 = Console.ReadLine();
+
+Console.WriteLine("Ange namn: ");
+string enhet4 = Console.ReadLine();
+
+Console.WriteLine("Ange status: ");
+string status4 = Console.ReadLine();
+
+Console.WriteLine("Ange pris: ");
+int price4 = Convert.ToInt32(Console.ReadLine());
+
+string row4 = $"ID: {id4} | Namn: {enhet4} | Status: {status4} | Pris: {price4} kr";
+
+Console.WriteLine();
+Console.WriteLine("Ny enhet: ");
+Console.WriteLine(row4);
