@@ -10,20 +10,22 @@ string enhet2 = "Projektor 1";
 string id2 = "D-200";
 string status2 = "Service";
 int price2 = 100;
+double brutto2 = price2 * (1 + moms);
 
 string id3 = "D-300";
 string enhet3 = "Skärm 1";
 string status3 = "Inaktiv";
 int price3 = 800;
+double brutto3 = price3 * (1 + moms);
 
 // Det här är rad 2 i vårat register (ifall du undrar)
-string row2 = "ID: " + id2 + " | Namn: " + enhet2 + " | " + "Status: " + status2 + " | Pris: " + price2 + " | Brutto: " + price2 * (1 + moms);
+string row2 = "ID: " + id2 + " | Namn: " + enhet2 + " | " + "Status: " + status2 + " | Pris: " + price2 + " | Brutto: " + brutto2;
 
-string row3 = $"ID:  {id3} | Namn: {enhet3} | Status: {status3} | Pris: {price3} | Brutto: {price3 * (1 + moms)}";
+string row3 = $"ID:  {id3} | Namn: {enhet3} | Status: {status3} | Pris: {price3} | Brutto: {brutto3}";
 
 Console.WriteLine("Enhetsregister");
 Console.WriteLine();
-Console.WriteLine("ID: " + id1 + " | Namn: " + enhet1 + " | Status: " + status1 + " | Pris: " + price1 + " Brutto: " + price1 * (1 + moms));
+Console.WriteLine("ID: " + id1 + " | Namn: " + enhet1 + " | Status: " + status1 + " | Pris: " + price1 + " | Brutto: " + brutto1);
 Console.WriteLine(row2);
 Console.WriteLine(row3);
 
