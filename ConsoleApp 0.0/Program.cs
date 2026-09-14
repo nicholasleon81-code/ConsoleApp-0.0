@@ -50,22 +50,45 @@ Console.WriteLine("Ny enhet: ");
 Console.WriteLine(row4);
 
 int totalPrice = price1 + price2 + price3 + price4;
-Console.WriteLine(totalPrice);
+string totalPrices = $"Alla pris tillsammans blir {totalPrice}";
+Console.WriteLine(totalPrices);
 
 bool priceGreaterThan = price4 > 700;
 bool priceLesserThan = price4 < 700;
 
-if (priceGreaterThan && status4 != "Service")
+if (priceGreaterThan)
 {
     Console.WriteLine();
     Console.WriteLine("Du har valt en dyr produkt");
 
-} else if (priceLesserThan && status4 != "Service")
+}
+else if (priceLesserThan)
 {
     Console.WriteLine();
     Console.WriteLine("Du har valt en billig produkt");
 
-} else if(status4 == "Service")
+}
+
+
+switch (status4) 
 {
-    Console.WriteLine("Fixa datorn >:( ");
+    case "Aktiv":
+        Console.WriteLine();
+        Console.WriteLine("Du behöver ej återgärda.");
+        break;
+        
+    case "Inaktiv":
+        Console.WriteLine();
+        Console.WriteLine("Sätt på Enheten!");
+        break;
+
+    case "Service":
+        Console.WriteLine();
+        Console.WriteLine("Enheten finns på Servicedesk");
+        break;
+
+    default:
+        Console.WriteLine();
+        Console.WriteLine("Status existerar inte");
+        break;
 }
