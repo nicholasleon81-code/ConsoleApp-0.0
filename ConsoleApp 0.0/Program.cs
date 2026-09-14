@@ -54,9 +54,6 @@ string totalPrices = $"Alla pris tillsammans blir {totalPrice}";
 Console.WriteLine();
 Console.WriteLine(totalPrices);
 
-bool priceGreaterThan = price4 > 1000;
-bool priceLesserThan = price4 < 1000;
-
 int[] prices = [price1, price2, price3, price4];
 
 foreach (int price in prices)
