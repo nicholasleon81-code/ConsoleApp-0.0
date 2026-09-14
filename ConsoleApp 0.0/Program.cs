@@ -1,4 +1,6 @@
-﻿double moms = 0.25;
+﻿using System.ComponentModel.Design;
+
+double moms = 0.25;
 
 string enhet1 = "Laptopsal 1";
 string id1 = "D-100";
@@ -49,3 +51,16 @@ Console.WriteLine(row4);
 
 int totalPrice = price1 + price2 + price3 + price4;
 Console.WriteLine(totalPrice);
+
+bool priceGreaterThan = price4 > 700;
+bool priceLesserThan = price4 < 700;
+
+if (priceGreaterThan)
+{
+    Console.WriteLine("Du har valt en dyr produkt");
+   
+} else if(priceLesserThan)
+{
+    Console.WriteLine("Du har valt en billig produkt");
+
+}
