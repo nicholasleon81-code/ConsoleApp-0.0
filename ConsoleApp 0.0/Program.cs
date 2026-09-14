@@ -51,24 +51,29 @@ Console.WriteLine(row4);
 
 int totalPrice = price1 + price2 + price3 + price4;
 string totalPrices = $"Alla pris tillsammans blir {totalPrice}";
+Console.WriteLine();
 Console.WriteLine(totalPrices);
 
-bool priceGreaterThan = price4 > 700;
-bool priceLesserThan = price4 < 700;
+bool priceGreaterThan = price4 > 1000;
+bool priceLesserThan = price4 < 1000;
 
-if (priceGreaterThan)
+int[] prices = [price1, price2, price3, price4];
+
+foreach (int price in prices)
 {
-    Console.WriteLine();
-    Console.WriteLine("Du har valt en dyr produkt");
-
+    if (price < 700)
+    {
+        Console.WriteLine();
+        Console.WriteLine(price);
+        Console.WriteLine("Ditt pris är billigt");
+    }
+    else
+    {
+        Console.WriteLine();
+        Console.WriteLine(price);
+        Console.WriteLine("Ditt pris är dyrt");
+    }
 }
-else if (priceLesserThan)
-{
-    Console.WriteLine();
-    Console.WriteLine("Du har valt en billig produkt");
-
-}
-
 
 switch (status4) 
 {
