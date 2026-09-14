@@ -55,17 +55,17 @@ Console.WriteLine(totalPrice);
 bool priceGreaterThan = price4 > 700;
 bool priceLesserThan = price4 < 700;
 
-if (priceGreaterThan && status4 == "Aktiv")
+if (priceGreaterThan && status4 != "Service")
 {
     Console.WriteLine();
-    Console.WriteLine("Du har valt en dyr produkt som fungerar");
+    Console.WriteLine("Du har valt en dyr produkt");
 
-} else if (priceLesserThan && status4 == "Inaktiv")
+} else if (priceLesserThan && status4 != "Service")
 {
     Console.WriteLine();
-    Console.WriteLine("Du har valt en billig produkt, ta till Servicedesk");
+    Console.WriteLine("Du har valt en billig produkt");
 
 } else if(status4 == "Service")
 {
-    Console.WriteLine("Fixa datorn");
+    Console.WriteLine("Fixa datorn >:( ");
 }
